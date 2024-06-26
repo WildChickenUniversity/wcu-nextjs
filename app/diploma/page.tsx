@@ -14,8 +14,10 @@ export default function Diploma() {
   const handleSumbit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const majorField: string =
-      enableCustomMajor && customMajor !== '' ? customMajor : major;
-    await createDiplomaPDF({ username, major: majorField, degree });
+      enableCustomMajor && customMajor !== "" ? customMajor : major;
+    const degreeField: string =
+      enableCustomDegree && customDegree !== "" ? customDegree : degree;
+    await createDiplomaPDF({ username, major: majorField, degree: degreeField });
   };
 
   const handleSelectChangeMajor = async (value: string) => {
