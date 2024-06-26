@@ -5,11 +5,11 @@ import Footer from "./components/footer";
 import Provider from "./components/provider";
 import Comment from "./components/comment";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Wild Chicken University',
-  description: 'Possible things made impossible',
+  title: "Wild Chicken University",
+  description: "Possible things made impossible",
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body className={`${inter.className}`}>
         <Provider>
           {children}
